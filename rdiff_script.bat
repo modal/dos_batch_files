@@ -54,6 +54,7 @@ rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\bin g:\r
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\home g:\rd_backup\home
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\projects g:\rd_backup\projects
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\repo g:\rd_backup\repo
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\license g:\rd_backup\license
 
 
 
