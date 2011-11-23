@@ -55,8 +55,7 @@ rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\home g:\
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\projects g:\rd_backup\projects
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\repo g:\rd_backup\repo
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\license g:\rd_backup\license
-
-
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 "C:\Documents and Settings\dahlintw\My Documents\workspace" g:\rd_backup\my_doc\workspace
 
 pause
 
