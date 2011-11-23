@@ -8,7 +8,7 @@ rem
 rem Description:
 rem
 rem rdiff-backup script for creating incremental backups of working
-rem directories at work.
+rem directories at work to another hard drive.
 rem
 rem rdiff-backup can be downloaded from the following link:
 rem http://www.nongnu.org/rdiff-backup/
