@@ -52,15 +52,17 @@ pause
 exit
 
 :GEXISTS
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\Keil\C51\projects g:\rd_backup\Keil\C51\projects
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\_bkspc g:\rd_backup\_bkspc
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\adsp g:\rd_backup\adsp
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\bin g:\rd_backup\bin
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\home g:\rd_backup\home
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\projects g:\rd_backup\projects
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\repo g:\rd_backup\repo
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 c:\license g:\rd_backup\license
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 "C:\Documents and Settings\dahlintw\My Documents\workspace" g:\rd_backup\my_doc\workspace
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "c:\Keil\C51\projects" "g:\rd_backup\Keil\C51\projects"
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc g:\rd_backup\_bkspc
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\adsp g:\rd_backup\adsp
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin g:\rd_backup\bin
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home g:\rd_backup\home
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects g:\rd_backup\projects
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo g:\rd_backup\repo
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license g:\rd_backup\license
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" g:\rd_backup\my_doc\workspace
+
+echo RDIFF backup batch script complete
 
 pause
 
