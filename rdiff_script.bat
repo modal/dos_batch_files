@@ -32,6 +32,11 @@ rem Maintenance:
 rem
 rem Periodically remove old incremental saves and verify the backup.
 rem
+rem Alternative Solutions:
+rem
+rem BUP is a backup utility built around git and maybe more suitable for my use
+rem when it has a stable release.
+rem
 rem **************************************************************************
 
 IF EXIST G: GOTO :GEXISTS
