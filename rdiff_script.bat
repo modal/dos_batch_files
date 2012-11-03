@@ -39,7 +39,7 @@ rem when it has a stable release.
 rem
 rem **************************************************************************
 
-IF EXIST G: GOTO :GEXISTS
+IF EXIST E: GOTO :EEXISTS
 echo ############################
 echo  eee  RR    RR    OO    RR
 echo E    R  R  R  R  O  O  R  R
@@ -47,21 +47,19 @@ echo Eee  RRR   RRR   O  O  RRR
 echo E    R  R  R  R  O  O  R  R
 echo Eeee R   R R   R  OO   R   R
 echo ############################
-echo ERROR: G DRIVE NOT CONNECTED, RDIFF-BACKUP SCRIPT NOT RUN
+echo ERROR: E DRIVE NOT CONNECTED, RDIFF-BACKUP SCRIPT NOT RUN
 pause
 exit
 
-:GEXISTS
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "c:\Keil\C51\projects" "g:\rd_backup\Keil\C51\projects"
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc g:\rd_backup\_bkspc
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\adsp g:\rd_backup\adsp
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin g:\rd_backup\bin
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home g:\rd_backup\home
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects g:\rd_backup\projects
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo g:\rd_backup\repo
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license g:\rd_backup\license
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" g:\rd_backup\my_doc\workspace
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\workspace" g:\rd_backup\my_doc\ws_msp430
+:EEXISTS
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc e:\rd_backup\_bkspc
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin e:\rd_backup\bin
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home e:\rd_backup\home
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects e:\rd_backup\projects
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo e:\rd_backup\repo
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license e:\rd_backup\license
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" e:\rd_backup\my_doc\workspace
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\workspace" e:\rd_backup\my_doc\ws_msp430
 
 echo RDIFF backup batch script complete
 
@@ -71,12 +69,12 @@ rem **************************************************************************
 rem Useful rdiff-backup commands
 rem
 rem Backup without printing to the screen.
-rem rdiff-backup c:\home g:\rd_backup\home
+rem rdiff-backup c:\home e:\rd_backup\home
 rem Verify Backup Directory
-rem rdiff-backup --verify-at-time now g:\rd_backup\home
+rem rdiff-backup --verify-at-time now e:\rd_backup\home
 rem Compare Folders
-rem rdiff-backup --compare-full c:\home g:\rd_backup\home
+rem rdiff-backup --compare-full c:\home e:\rd_backup\home
 rem Deleting older files (4 weeks)
-rem rdiff-backup --remove-older-than 4W g:\rd_backup\home
+rem rdiff-backup --remove-older-than 4W e:\rd_backup\home
 rem **************************************************************************
 
