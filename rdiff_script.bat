@@ -39,7 +39,11 @@ rem when it has a stable release.
 rem
 rem **************************************************************************
 
-IF EXIST E: GOTO :EEXISTS
+echo %0 start
+
+set DRV=E:
+
+IF EXIST %DRV% GOTO :DRV_EXISTS
 echo ############################
 echo  eee  RR    RR    OO    RR
 echo E    R  R  R  R  O  O  R  R
@@ -47,19 +51,19 @@ echo Eee  RRR   RRR   O  O  RRR
 echo E    R  R  R  R  O  O  R  R
 echo Eeee R   R R   R  OO   R   R
 echo ############################
-echo ERROR: E DRIVE NOT CONNECTED, RDIFF-BACKUP SCRIPT NOT RUN
+echo ERROR: %DRV% DRIVE NOT CONNECTED, RDIFF-BACKUP SCRIPT NOT RUN
 pause
 exit
 
-:EEXISTS
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc e:\rd_backup\_bkspc
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin e:\rd_backup\bin
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home e:\rd_backup\home
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects e:\rd_backup\projects
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo e:\rd_backup\repo
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license e:\rd_backup\license
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" e:\rd_backup\my_doc\workspace
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\workspace" e:\rd_backup\my_doc\ws_msp430
+:DRV_EXISTS
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc %DRV%\rd_backup\_bkspc
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin %DRV%\rd_backup\bin
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home %DRV%\rd_backup\home
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects %DRV%\rd_backup\projects
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo %DRV%\rd_backup\repo
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license %DRV%\rd_backup\license
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" %DRV%\rd_backup\my_doc\workspace
+rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\workspace" %DRV%\rd_backup\my_doc\ws_msp430
 
 echo RDIFF backup batch script complete
 
