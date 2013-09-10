@@ -41,7 +41,7 @@ rem **************************************************************************
 
 echo %0 start
 
-set DRV=E:
+set DRV=e:
 
 IF EXIST %DRV% GOTO :DRV_EXISTS
 echo ############################
@@ -62,8 +62,6 @@ rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-fu
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects %DRV%\rd_backup\projects
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo %DRV%\rd_backup\repo
 rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license %DRV%\rd_backup\license
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\My Documents\workspace" %DRV%\rd_backup\my_doc\workspace
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path "C:\Documents and Settings\dahlintw\workspace" %DRV%\rd_backup\my_doc\ws_msp430
 
 echo RDIFF backup batch script complete
 
