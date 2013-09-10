@@ -27,6 +27,7 @@ rem http://ss64.com/nt/schtasks.html
 rem http://support.microsoft.com/kb/308569
 rem http://drupal.org/node/31506
 rem
+rem http://stackoverflow.com/questions/245395/hidden-features-of-windows-batch-files
 rem
 rem Maintenance:
 rem
