@@ -42,7 +42,7 @@ rem **************************************************************************
 
 echo %0 start
 
-set DRV=e:
+set DRV=f:
 
 IF EXIST %DRV% GOTO :DRV_EXISTS
 echo ############################
@@ -57,12 +57,12 @@ pause
 exit
 
 :DRV_EXISTS
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc %DRV%\rd_backup\_bkspc
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin %DRV%\rd_backup\bin
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home %DRV%\rd_backup\home
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects %DRV%\rd_backup\projects
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo %DRV%\rd_backup\repo
-rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license %DRV%\rd_backup\license
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\_bkspc %DRV%\rd_backup\_bkspc
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\bin %DRV%\rd_backup\bin
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\home %DRV%\rd_backup\home
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\projects %DRV%\rd_backup\projects
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\repo %DRV%\rd_backup\repo
+C:\bin\rdiff-backup-1.2.8\rdiff-backup --print-statistics --verbosity 5 --terminal-verbosity 5 --create-full-path c:\license %DRV%\rd_backup\license
 
 echo RDIFF backup batch script complete
 
