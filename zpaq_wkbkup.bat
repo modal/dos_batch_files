@@ -65,7 +65,11 @@ pause
 exit
 
 :DRV_EXISTS
-copy c:\work.zpaq %DRV%\work.zpaq
+rem OLDWAY ==> copy c:\work.zpaq %DRV%\work.zpaq
+
+rem using esentutl to get a progress bar
+del %DRV%\work.zpaq
+esentutl /y c:\work.zpaq /d %DRV%\work.zpaq /o
 
 echo ZPAQ backup batch script complete
 rem **************************************************************************
