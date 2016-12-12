@@ -40,12 +40,12 @@ rem **************************************************************************
 echo %0 start
 
 rem ########################################
-zpaq add c:\work.zpaq c:\_bkspc -method 4
-zpaq add c:\work.zpaq c:\bin -method 4
-zpaq add c:\work.zpaq c:\home -method 4
-zpaq add c:\work.zpaq c:\projects -method 4
-zpaq add c:\work.zpaq c:\repo -method 4
-zpaq add c:\work.zpaq c:\license -method 4
+zpaq64 add c:\work.zpaq c:\_bkspc -method 4
+zpaq64 add c:\work.zpaq c:\bin -method 4
+zpaq64 add c:\work.zpaq c:\home -method 4
+zpaq64 add c:\work.zpaq c:\projects -method 4
+zpaq64 add c:\work.zpaq c:\repo -method 4
+zpaq64 add c:\work.zpaq c:\license -method 4
 
 time /t
 date /t
