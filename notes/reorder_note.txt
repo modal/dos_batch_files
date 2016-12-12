@@ -1,0 +1,6 @@
+Reorder file name
+
+
+for i in *; do echo $i | awk -F'[-.]' '{print $2"_"$1"."$3 }' ; done
+
+for i in *; do ni=$(echo $i | awk -F'[-.]' '{print $2"_"$1"."$3}') && mv "$i" "$ni" ; done
